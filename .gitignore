@@ -11,6 +11,7 @@
 
 # Backend .env file — contains IBM Cloud API key, watsonx Project ID, JWT secret
 backend/.env
+backend/.env.example
 
 # Streamlit secrets — contains IBM Cloud API key, watsonx Project ID
 streamlit_app/.streamlit/secrets.toml
