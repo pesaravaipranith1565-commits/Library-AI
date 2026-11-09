@@ -1,0 +1,106 @@
+/* App layout and navigation */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  height: 60px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  min-width: 180px;
+}
+.brand-icon { font-size: 26px; }
+.brand-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  line-height: 1.2;
+}
+.brand-sub {
+  font-size: 10px;
+  color: var(--ibm-blue);
+  font-weight: 500;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { background: var(--border); color: var(--text-primary); text-decoration: none; }
+.nav-link.active { background: rgba(15,98,254,0.15); color: var(--ibm-blue); }
+
+.navbar-profile { margin-left: auto; }
+.student-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15,98,254,0.1);
+  border: 1px solid rgba(15,98,254,0.3);
+  border-radius: 20px;
+  padding: 4px 12px 4px 4px;
+}
+.student-avatar {
+  width: 28px;
+  height: 28px;
+  background: var(--ibm-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+.student-name { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+
+.app-content { flex: 1; overflow-y: auto; }
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.footer-sep { opacity: 0.4; }
+
+@media (max-width: 768px) {
+  .navbar { flex-wrap: wrap; height: auto; padding: 10px 16px; gap: 10px; }
+  .navbar-links { gap: 2px; }
+  .nav-link { padding: 5px 10px; font-size: 12px; }
+  .brand-sub { display: none; }
+}
